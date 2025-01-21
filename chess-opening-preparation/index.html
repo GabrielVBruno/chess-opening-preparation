@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Opening Preparation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Chess Opening Preparation</h1>
+    </header>
+    <main>
+        <button class="move-box">
+            <p>Bb5 pinning Knight:<br>- Bd6 O-O (Best)<br>- a6 xc6+ bxc6<br>- Others: don't take</p>
+            <div class="move-board" data-fen="r2qkbnr/ppp2ppp/2n1p3/1B1p1b2/3P1B2/4PN2/PPP2PPP/RN1QK2R w KQkq - 0 1" data-perspective="b" data-move-start="f1" data-move-end="b5"></div>
+        </button>
+        <div class="move-set-container">
+            <div class="move-set-title">
+                <h2>London System Mainline</h2> <button class="show-boards">🙾</button>
+            </div>
+            
+            <div class="move-set">
+                <button class="move-box" data-branch="0">
+                    <p>d4</p>
+                    <div class="move-board" data-fen="rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1" data-perspective="w" data-move-start="d2" data-move-end="d4"></div>
+                </button><button class="move-box" data-branch="0">
+                    <p>d5</p>
+                    <div class="move-board" data-fen="rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq d6 0 2" data-perspective="w" data-move-start="d7" data-move-end="d5"></div>
+                </button><button class="move-box" data-branch="0">
+                    <p>Bf4</p>
+                    <div class="move-board" data-fen="rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2" data-perspective="w" data-move-start="c1" data-move-end="f4"></div>
+                </button><button class="move-box" data-branch="00">
+                    <div class="move-classification best"></div>
+                    <p>Kf6</p>
+                    <div class="move-board" data-fen="rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3" data-perspective="w" data-move-start="g8" data-move-end="f6"></div>
+                </button><button class="move-box" data-branch="01">
+                    <div class="move-classification good"></div>
+                    <p>Kc6</p>
+                    <div class="move-board" data-fen="r1bqkbnr/ppp1pppp/2n5/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3" data-perspective="w" data-move-start="b8" data-move-end="c6"></div>
+                </button><button class="move-box" data-branch="00">
+                    <p>e3</p>
+                    <div class="move-board" data-fen="rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3" data-perspective="w" data-move-start="e2" data-move-end="e3"></div>
+                </button><button class="move-box" data-branch="01">
+                    <p>e3</p>
+                    <div class="move-board" data-fen="r1bqkbnr/ppp1pppp/2n5/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3" data-perspective="w" data-move-start="e2" data-move-end="e3"></div>
+                </button><button class="move-box" data-branch="000">
+                    <p>c5</p>
+                    <div class="move-board" data-fen="rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq c6 0 4" data-perspective="w" data-move-start="c7" data-move-end="c5"></div>
+                </button><button class="move-box" data-branch="001">
+                    <p>Bf5</p>
+                    <div class="move-board" data-fen="rn1qkb1r/ppp1pppp/5n2/3p1b2/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 1 4" data-perspective="w" data-move-start="c8" data-move-end="f5"></div>
+                </button><button class="move-box" data-branch="010">
+                    <p>Kf6</p>
+                    <div class="move-board" data-fen="r1bqkb1r/ppp1pppp/2n2n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 1 4" data-perspective="w" data-move-start="g8" data-move-end="f6"></div>
+                </button><button class="move-box" data-branch="011">
+                    <p>Bf5</p>
+                    <div class="move-board" data-fen="r2qkbnr/ppp1pppp/2n5/3p1b2/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 1 4" data-perspective="w" data-move-start="c8" data-move-end="f5"></div>
+                </button><button class="move-box" data-branch="000">
+                    <p>c3</p>
+                    <div class="move-board" data-fen="rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR b KQkq - 0 4" data-perspective="w" data-move-start="c2" data-move-end="c3"></div>
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
