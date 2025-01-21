@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --border-size: 0.3rem;
+    --move-box-line-height: 1.2rem;
+
+    --main-color-300: hsl(30, 8%, 14%);
+    --main-color-400: hsl(30, 8%, 16%);
+    --main-color-500: hsl(30, 8%, 18%);
+    --main-color-600: hsl(30, 8%, 20%);
+    --main-color-700: hsl(30, 8%, 21%);
+
+    --board-light-color: #ebecd0;
+    --board-dark-color: #739552;
+    --board-darker-light-color: hsl(62, 22%, 77%);
+    --board-darker-dark-color: hsl(90, 29%, 40%);
+
+    --highlight-color: rgb(255, 255, 51);
+
+    --image-piece-wp: url('https://assets-themes.chess.com/image/ejgfv/300/wp.png');
+    --image-piece-wn: url('https://assets-themes.chess.com/image/ejgfv/300/wn.png');
+    --image-piece-wb: url('https://assets-themes.chess.com/image/ejgfv/300/wb.png');
+    --image-piece-wr: url('https://assets-themes.chess.com/image/ejgfv/300/wr.png');
+    --image-piece-wq: url('https://assets-themes.chess.com/image/ejgfv/300/wq.png');
+    --image-piece-wk: url('https://assets-themes.chess.com/image/ejgfv/300/wk.png');
+    --image-piece-bp: url('https://assets-themes.chess.com/image/ejgfv/300/bp.png');
+    --image-piece-bn: url('https://assets-themes.chess.com/image/ejgfv/300/bn.png');
+    --image-piece-bb: url('https://assets-themes.chess.com/image/ejgfv/300/bb.png');
+    --image-piece-br: url('https://assets-themes.chess.com/image/ejgfv/300/br.png');
+    --image-piece-bq: url('https://assets-themes.chess.com/image/ejgfv/300/bq.png');
+    --image-piece-bk: url('https://assets-themes.chess.com/image/ejgfv/300/bk.png');
+}
+
+body {
+    background-color: var(--main-color-700);
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: var(--main-color-300);
+    padding: 0.4em;
+}
+
+.move-set-container {
+    margin: var(--border-size) var(--border-size) 0 var(--border-size);
+}
+
+.move-set {
+    background-color: var(--main-color-700);
+    border: var(--border-size) solid var(--main-color-500);
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--border-size);
+    justify-content: start;
+    padding: var(--border-size);
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.move-box {
+    grid-row-start: 1;
+    box-sizing: inherit;
+    color: inherit;
+    text-align: inherit;
+    font-size: inherit;
+    line-height: var(--move-box-line-height);
+    background-color: var(--main-color-400);
+    width: 12em;
+    padding: var(--border-size);
+    position: relative;
+    border: var(--border-size) solid var(--main-color-500);
+    user-select: none;
+}
+
+.move-box:hover {
+    background-color: var(--main-color-500);
+    border-color: var(--main-color-600);
+    cursor: pointer;
+}
+
+.move-box:active {
+    background-color: var(--main-color-600);
+    border-color: var(--main-color-500);
+}
+
+.move-box > p {
+    text-wrap: wrap;
+}
+
+.move-classification {
+    float: right;
+    width: var(--move-box-line-height);
+    aspect-ratio: 1 / 1;
+}
+
+.move-classification.brilliant {
+    background-image: url("images/brilliant.svg");
+}
+
+.move-classification.great_find {
+    background-image: url("images/great_find.svg");
+}
+
+.move-classification.best {
+    background-image: url("images/best.svg");
+}
+
+.move-classification.excellent {
+    background-image: url("images/excellent.svg");
+}
+
+.move-classification.good {
+    background-image: url("images/good.svg");
+}
+
+.move-classification.book {
+    background-image: url("images/book.svg");
+}
+
+.move-classification.inaccuracy {
+    background-image: url("images/inaccuracy.svg");
+}
+
+.move-classification.mistake {
+    background-image: url("images/mistake.svg");
+}
+
+.move-classification.incorrect {
+    background-image: url("images/incorrect.svg");
+}
+
+.move-classification.blunder {
+    background-image: url("images/blunder.svg");
+}
+
+.move-board {
+    margin-top: var(--border-size);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: none;
+}
+
+.move-box[data-show-board='true']>.move-board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.move-board > * {
+    background-size: cover;
+}
+
+.light-square {
+    background-color: var(--board-light-color);
+}
+
+.dark-square {
+    background-color: var(--board-dark-color);
+}
+
+.light-square.highlight {
+    background-color: color-mix(in srgb, var(--board-light-color), var(--highlight-color));
+}
+
+.dark-square.highlight {
+    background-color: color-mix(in srgb, var(--board-dark-color), var(--highlight-color));
+}
+
+.wp {
+    background-image: var(--image-piece-wp);
+}
+
+.wn {
+    background-image: var(--image-piece-wn);
+}
+
+.wb {
+    background-image: var(--image-piece-wb);
+}
+
+.wr {
+    background-image: var(--image-piece-wr);
+}
+
+.wq {
+    background-image: var(--image-piece-wq);
+}
+
+.wk {
+    background-image: var(--image-piece-wk);
+}
+
+.bp {
+    background-image: var(--image-piece-bp);
+}
+
+.bn {
+    background-image: var(--image-piece-bn);
+}
+
+.bb {
+    background-image: var(--image-piece-bb);
+}
+
+.br {
+    background-image: var(--image-piece-br);
+}
+
+.bq {
+    background-image: var(--image-piece-bq);
+}
+
+.bk {
+    background-image: var(--image-piece-bk);
+}
+
+.move-set-title {
+    display: inline-block;
+    background-color: var(--main-color-500);
+    padding: calc(var(--border-size) * 2);
+    border-radius: calc(var(--border-size) * 2) calc(var(--border-size) * 2) 0 0;
+    font-size: 1.333em;
+}
+
+.move-set-title > h2 {
+    display: inline-block;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.show-boards {
+    background: var(--board-dark-color);
+    border: 0.1em solid var(--board-light-color);
+    color: var(--board-light-color);
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    user-select: none;
+    line-height: 1;
+    padding: 0.05em 0.1em 0.2em 0.1em;
+    opacity: 50%;
+}
+
+.show-boards:hover {
+    background: var(--board-darker-dark-color);
+    border-color: var(--board-darker-light-color);
+    color: var(--board-darker-light-color);
+}
+
+.show-boards:active {
+    background: var(--board-darker-light-color);
+    border-color: var(--board-darker-dark-color);
+    color: var(--board-darker-dark-color);
+}
+
+.show-boards[data-hide-boards='true'] {
+    opacity: 100%;
+}
