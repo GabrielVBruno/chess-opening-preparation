@@ -99,43 +99,43 @@ header {
 }
 
 .move-classification.brilliant {
-    background-image: url("images/brilliant.svg");
+    background-image: url("../images/brilliant.svg");
 }
 
 .move-classification.great_find {
-    background-image: url("images/great_find.svg");
+    background-image: url("../images/great_find.svg");
 }
 
 .move-classification.best {
-    background-image: url("images/best.svg");
+    background-image: url("../images/best.svg");
 }
 
 .move-classification.excellent {
-    background-image: url("images/excellent.svg");
+    background-image: url("../images/excellent.svg");
 }
 
 .move-classification.good {
-    background-image: url("images/good.svg");
+    background-image: url("../images/good.svg");
 }
 
 .move-classification.book {
-    background-image: url("images/book.svg");
+    background-image: url("../images/book.svg");
 }
 
 .move-classification.inaccuracy {
-    background-image: url("images/inaccuracy.svg");
+    background-image: url("../images/inaccuracy.svg");
 }
 
 .move-classification.mistake {
-    background-image: url("images/mistake.svg");
+    background-image: url("../images/mistake.svg");
 }
 
 .move-classification.incorrect {
-    background-image: url("images/incorrect.svg");
+    background-image: url("../images/incorrect.svg");
 }
 
 .move-classification.blunder {
-    background-image: url("images/blunder.svg");
+    background-image: url("../images/blunder.svg");
 }
 
 .move-board {
