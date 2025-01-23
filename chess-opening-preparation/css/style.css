@@ -88,8 +88,13 @@ header {
     border-color: var(--main-color-500);
 }
 
+main > .move-box {
+    margin: var(--border-size) var(--border-size) 0 var(--border-size);
+}
+
 .move-box > p {
     text-wrap: wrap;
+    white-space: pre-wrap;
 }
 
 .move-classification {
@@ -99,43 +104,43 @@ header {
 }
 
 .move-classification.brilliant {
-    background-image: url("images/brilliant.svg");
+    background-image: url("../images/brilliant.svg");
 }
 
 .move-classification.great_find {
-    background-image: url("images/great_find.svg");
+    background-image: url("../images/great_find.svg");
 }
 
 .move-classification.best {
-    background-image: url("images/best.svg");
+    background-image: url("../images/best.svg");
 }
 
 .move-classification.excellent {
-    background-image: url("images/excellent.svg");
+    background-image: url("../images/excellent.svg");
 }
 
 .move-classification.good {
-    background-image: url("images/good.svg");
+    background-image: url("../images/good.svg");
 }
 
 .move-classification.book {
-    background-image: url("images/book.svg");
+    background-image: url("../images/book.svg");
 }
 
 .move-classification.inaccuracy {
-    background-image: url("images/inaccuracy.svg");
+    background-image: url("../images/inaccuracy.svg");
 }
 
 .move-classification.mistake {
-    background-image: url("images/mistake.svg");
+    background-image: url("../images/mistake.svg");
 }
 
 .move-classification.incorrect {
-    background-image: url("images/incorrect.svg");
+    background-image: url("../images/incorrect.svg");
 }
 
 .move-classification.blunder {
-    background-image: url("images/blunder.svg");
+    background-image: url("../images/blunder.svg");
 }
 
 .move-board {
@@ -224,38 +229,61 @@ header {
     background-color: var(--main-color-500);
     padding: calc(var(--border-size) * 2);
     border-radius: calc(var(--border-size) * 2) calc(var(--border-size) * 2) 0 0;
-    font-size: 1.333em;
+    font-size: calc(4em / 3);
 }
 
 .move-set-title > h2 {
     display: inline-block;
     font-weight: inherit;
     font-size: inherit;
+    height: calc(4em / 3);
 }
 
 .show-boards {
-    background: var(--board-dark-color);
+    background-color: var(--board-dark-color);
+    padding: 0.1em;
     border: 0.1em solid var(--board-light-color);
-    color: var(--board-light-color);
     cursor: pointer;
     display: inline-block;
     font-size: inherit;
     user-select: none;
-    line-height: 1;
-    padding: 0.05em 0.1em 0.2em 0.1em;
+    height: calc(4em / 3);
+    aspect-ratio: 1 / 1;
     opacity: 50%;
 }
 
+.show-boards-icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, var(--board-light-color) 25%, transparent 25%, transparent 75%, var(--board-light-color) 75%),
+        linear-gradient(45deg, var(--board-light-color) 25%, transparent 25%, transparent 75%, var(--board-light-color) 75%);
+    background-position: 0 0, calc(1.4em / 3) calc(1.4em / 3);
+}
+
 .show-boards:hover {
-    background: var(--board-darker-dark-color);
+    background-color: var(--board-darker-dark-color);
     border-color: var(--board-darker-light-color);
-    color: var(--board-darker-light-color);
+}
+
+.show-boards:hover .show-boards-icon {
+    background: 
+        linear-gradient(45deg, var(--board-darker-light-color) 25%, transparent 25%, transparent 75%, var(--board-darker-light-color) 75%),
+        linear-gradient(45deg, var(--board-darker-light-color) 25%, transparent 25%, transparent 75%, var(--board-darker-light-color) 75%);
+    background-position: 0 0, calc(1.4em / 3) calc(1.4em / 3);
 }
 
 .show-boards:active {
-    background: var(--board-darker-light-color);
+    background-color: var(--board-darker-light-color);
     border-color: var(--board-darker-dark-color);
-    color: var(--board-darker-dark-color);
+}
+
+.show-boards:active .show-boards-icon {
+    background: 
+        linear-gradient(45deg, var(--board-darker-dark-color) 25%, transparent 25%, transparent 75%, var(--board-darker-dark-color) 75%),
+        linear-gradient(45deg, var(--board-darker-dark-color) 25%, transparent 25%, transparent 75%, var(--board-darker-dark-color) 75%);
+    background-position: 0 0, calc(1.4em / 3) calc(1.4em / 3);
 }
 
 .show-boards[data-hide-boards='true'] {
