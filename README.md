@@ -26,6 +26,7 @@ Latest changes (v0.1):
   - Initialization functions: `initMoveBoard`, `initMoveBox`, `initShowBoardsButton`, `initMoveSet`, `initMoveSetContainer`
 - Changed show boards button to not use a board character and instead have a background of a board (still has problems on Firefox and has inexact measures)
   - Added to do item about fixing the button (probably changing to an image)
+- Fixed move classification path to images
 - Added wrapping to the description of move boxes for later input capabilities
   - Changed HTML accordingly
 - Added margin to move boxes that aren't children of move sets
